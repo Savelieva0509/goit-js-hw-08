@@ -1,6 +1,6 @@
 'use strict';
 
-// import throttle from 'lodash.throttle';
+import throttle from 'lodash.throttle';
 
 const formRef = document.querySelector('.feedback-form')
 const LOCALE_STORAGE_KEY = "feedback-form-state"
@@ -18,9 +18,6 @@ const onFormInput = event => {
 
   save(LOCALE_STORAGE_KEY, saveData);
 };
-
-// const throttledOnFormInput = throttle(onFormInput, 300);
-// formRef.addEventListener('input', throttledOnFormInput);
 
 function initPage() {
   const saveData = load(LOCALE_STORAGE_KEY);
