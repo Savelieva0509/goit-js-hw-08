@@ -45,14 +45,13 @@ const handleSubmit = event => {
     return;
   }
   
-  if(!message.value) {
+  if (!message.value) {
     alert('Поле messege не заполнено');
     return;
   }
 
   console.log({ email: email.value, message: message.value });
 
-  refs.btn.disabled = !event.currentTarget.checked;
   event.currentTarget.reset();
   remove(LOCALE_STORAGE_KEY);
 };
