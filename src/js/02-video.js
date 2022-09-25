@@ -9,8 +9,8 @@ const player = new Player(iframe);
 player.on('timeupdate', throttle(onTimeUpdate,1000))
     
 function onTimeUpdate({ seconds }) {
-    console.log(seconds);
-    localStorage.setItem(LOCALE_STORAGE_KEY, seconds);
+    const saveTime = localStorage.setItem(LOCALE_STORAGE_KEY, seconds);
+    return saveTime === null ? undefined : localStorage.getItem(LOCALE_STORAGE_KEY);
 }
 
 player.setCurrentTime(localStorage.getItem(LOCALE_STORAGE_KEY));

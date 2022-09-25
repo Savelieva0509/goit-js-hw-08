@@ -20,20 +20,20 @@ function createGallaryCardMarkup(galleryItems) {
 }
 
 
-galleryContainer.addEventListener("click", onGalleryContainerClick)
+// galleryContainer.addEventListener("click", onGalleryContainerClick)
 
 const lightbox = new SimpleLightbox(".gallery a", { 
         captionsData: "alt",
         captionDelay: 250,
     });
 
-function onGalleryContainerClick(event) {
-  event.preventDefault()
+// function onGalleryContainerClick(event) {
+//   event.preventDefault()
 
-  const isGalleryEl = event.target.nodeName === 'IMG';
+//   const isGalleryEl = event.target.nodeName === 'IMG';
 
-  if (!isGalleryEl) {
-    return
-  }
+//   if (!isGalleryEl) {
+//     return
+//   }
 
-}   
+// }   
